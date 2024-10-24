@@ -1,0 +1,54 @@
+.data-card-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #0a1a2f; /* Dark background */
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Adjust the gap as needed */
+  }
+  .card {
+    border-radius: 10px;
+    overflow: hidden;
+
+  }
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+.community-section {
+    max-width: 400px;
+  }
+  
+
+.community-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.community-section p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.join-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .join-button:hover {
+    background-color: #0056b3;
+  }
