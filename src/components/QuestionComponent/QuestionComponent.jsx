@@ -1,18 +1,17 @@
 import React from 'react'
+import StakeInfo from './StakeInfo'
+import Questions from './Questions'
 
 const QuestionComponent = () => {
   return (
-    <div className="bg-gray-700 w-full h-full">
-        <div className="flex justify-between">
-            <div>
-                <h1>Still have questions?</h1>
-                <button>Read our guides</button>
+    <div className="flex justify-between bg-gray-700 min-h-screen h-full">
+            <div className="flex flex-col justify-center items-center w-2/5">
+                <Questions />
             </div>
-            <div>
-                
+            <div className="flex flex-col justify-center w-3/5">
+                <StakeInfo />
             </div>
         </div>
-    </div>
   )
 }
 
