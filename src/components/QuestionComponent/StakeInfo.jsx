@@ -1,66 +1,196 @@
-import React from 'react';
+import { useState } from 'react';
 
-const StakeInfo = () => {
+function StakeInfo() {
+  const [showSection, setShowSection] = useState(false);
+
+  const handleToggleSection = () => {
+    setShowSection(!showSection);
+  };
+
   return (
-    <div className="bg-gray-800 text-white p-4 rounded-md w-4/5">
-      <h2 className="text-2xl font-bold mb-4">Who is Stake?</h2>
-      <p className="mb-4">
-        Leading the online gambling industry since 2017, Stake.com offers a wide
-        variety of online casino and sports betting options, operating globally in 15
-        different languages.
-      </p>
-      <p className="mb-4">
-        With a reputable and secure platform, Stake Casino is home to worldwide
-        local currencies and crypto betting options for online slot games,
-        Stake Originals and live casino games. Stake Sportsbook offers unbeatable
-        odds on all major sporting events including a range of eSport leagues.
-      </p>
-      <p className="mb-4">
-        We host regular bet bonuses and promotions and offer an exclusive
-        VIP Club experience - all with a simple-to-use deposit process on our
-        licensed platform.
-      </p>
-      <div className="mt-4">
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-          Learn More
+    <div className="bg-gray-900 text-white p-4 rounded-md w-4/5">
+      <div className="bg-gray-800 rounded-md p-4 mb-4 flex justify-between">
+        <h2 className="text-xl font-bold">Who is Stake?</h2>
+        <button onClick={handleToggleSection}>
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
         </button>
       </div>
-      <div className="mt-8">
-        <h3 className="text-xl font-bold mb-2">Frequently Asked Questions</h3>
-        <ul className="list-disc">
-          <li className="mb-2">
-            <a href="#" className="text-blue-500 hover:text-blue-700">
-              Is Stake licensed?
-            </a>
-          </li>
-          <li className="mb-2">
-            <a href="#" className="text-blue-500 hover:text-blue-700">
-              Is betting on Stake safe?
-            </a>
-          </li>
-          <li className="mb-2">
-            <a href="#" className="text-blue-500 hover:text-blue-700">
-              What currencies can I bet with?
-            </a> </li>
-          <li className="mb-2">
-            <a href="#" className="text-blue-500 hover:text-blue-700">
-              What types of casino games can I play?
-            </a>
-          </li>
-          <li className="mb-2">
-            <a href="#" className="text-blue-500 hover:text-blue-700">
-              What sports can I bet on?
-            </a>
-          </li>
-          <li className="mb-2">
-            <a href="#" className="text-blue-500 hover:text-blue-700">
-              How do I watch live streams?
-            </a>
-          </li>
-        </ul>
+
+      {showSection && (
+        <div className="space-y-4">
+          <p className="text-sm">
+            Leading the online gambling industry since 2017, Stake.com offers a
+            wide variety of online casino and sports betting options, operating
+            globally in 15 different languages.
+          </p>
+          <p className="text-sm">
+            With a reputable and secure platform, Stake Casino is home to
+            worldwide local currencies and crypto betting options for online slot
+            games, Stake Originals and live casino games. Stake Sportsbook
+            offers unbeatable odds on all major sporting events including a
+            range of eSport leagues.
+          </p>
+          <p className="text-sm">
+            We host regular bet bonuses and promotions and offer an exclusive
+            VIP Club experience - all with a simple-to-use deposit process on our
+            licensed platform.
+          </p>
+        </div>
+      )}
+
+<div className="bg-gray-800 rounded-md p-4 mb-4">
+      <h3 className="text-lg font-bold text-white">Is Stake licensed?</h3>
+      <div className="flex justify-between items-center">
+        <div className="text-gray-400">
+          {/* Add your content here */}
+        </div>
+        <svg
+          className="w-6 h-6 text-white cursor-pointer"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
       </div>
     </div>
+
+    <div className="bg-gray-800 rounded-md p-4 mb-4">
+      <h3 className="text-lg font-bold text-white">Is betting on Stake safe?</h3>
+      <div className="flex justify-between items-center">
+        <div className="text-gray-400">
+          {/* Add your content here */}
+        </div>
+        <svg
+          className="w-6 h-6 text-white cursor-pointer"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <div className="bg-gray-800 rounded-md p-4 mb-4">
+      <h3 className="text-lg font-bold text-white">What currencies can I bet with?</h3>
+      <div className="flex justify-between items-center">
+        <div className="text-gray-400">
+          {/* Add your content here */}
+        </div>
+        <svg
+          className="w-6 h-6 text-white cursor-pointer"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <div className="bg-gray-800 rounded-md p-4 mb-4">
+      <h3 className="text-lg font-bold text-white">What type of casino games can I play?</h3>
+      <div className="flex justify-between items-center">
+        <div className="text-gray-400">
+          {/* Add your content here */}
+        </div>
+        <svg
+          className="w-6 h-6 text-white cursor-pointer"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </div>
+    </div>
+    <div className="bg-gray-800 rounded-md p-4 mb-4">
+      <h3 className="text-lg font-bold text-white">What sports can I bet on?</h3>
+      <div className="flex justify-between items-center">
+        <div className="text-gray-400">
+          {/* Add your content here */}
+        </div>
+        <svg
+          className="w-6 h-6 text-white cursor-pointer"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </div>
+    </div>
+    <div className="bg-gray-800 rounded-md p-4 mb-4">
+      <h3 className="text-lg font-bold text-white">How do I watch live streams?</h3>
+      <div className="flex justify-between items-center">
+        <div className="text-gray-400">
+          {/* Add your content here */}
+        </div>
+        <svg
+          className="w-6 h-6 text-white cursor-pointer"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </div>
+    </div>
+
+    </div>
+
+    
   );
-};
+}
 
 export default StakeInfo;
