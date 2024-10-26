@@ -4,14 +4,14 @@ import Questions from './Questions'
 
 const QuestionComponent = () => {
   return (
-    <div className="flex justify-between bg-gray-700 min-h-screen h-full">
-            <div className="flex flex-col justify-center items-center w-2/5">
-                <Questions />
-            </div>
-            <div className="flex flex-col justify-center w-3/5">
-                <StakeInfo />
-            </div>
-        </div>
+    <div className="flex justify-center bg-slate-700 min-h-screen h-full">
+      <div className="flex flex-col justify-center items-center w-1/2">
+        <Questions />
+      </div>
+      <div className="flex flex-col justify-center w-1/2">
+        <StakeInfo />
+      </div>
+    </div>
   )
 }
 

@@ -1,16 +1,18 @@
 import { useState } from 'react';
 
 function StakeInfo() {
-  const [showSection, setShowSection] = useState(false);
+  const [showSection, setShowSection] = useState(true);
 
   const handleToggleSection = () => {
     setShowSection(!showSection);
   };
 
   return (
-    <div className="bg-gray-900 text-white p-4 rounded-md w-4/5">
-      <div className="bg-gray-800 rounded-md p-4 mb-4 flex justify-between">
-        <h2 className="text-xl font-bold">Who is Stake?</h2>
+    <div 
+    className="text-slate-400 p-4 rounded-md w-4/5"
+    >
+      <div className="bg-slate-800 rounded-md rounded-b-none border-b border-slate-600 p-4 flex justify-between">
+        <h2 className="text-xl font-bold text-white">Who is Stake?</h2>
         <button onClick={handleToggleSection}>
           <svg
             className="w-6 h-6"
@@ -30,7 +32,7 @@ function StakeInfo() {
       </div>
 
       {showSection && (
-        <div className="space-y-4">
+        <div className="space-y-4 mt-0 p-2 bg-gray-800 font-semibold rounded-b">
           <p className="text-sm">
             Leading the online gambling industry since 2017, Stake.com offers a
             wide variety of online casino and sports betting options, operating
@@ -51,12 +53,11 @@ function StakeInfo() {
         </div>
       )}
 
-<div className="bg-gray-800 rounded-md p-4 mb-4">
+<div className="bg-slate-800 flex justify-between rounded-md p-4 mt-4 mb-4">
+      <div>
       <h3 className="text-lg font-bold text-white">Is Stake licensed?</h3>
+      </div>
       <div className="flex justify-between items-center">
-        <div className="text-gray-400">
-          {/* Add your content here */}
-        </div>
         <svg
           className="w-6 h-6 text-white cursor-pointer"
           fill="none"
@@ -74,7 +75,7 @@ function StakeInfo() {
       </div>
     </div>
 
-    <div className="bg-gray-800 rounded-md p-4 mb-4">
+    <div className="bg-slate-800 flex justify-between rounded-md p-4 mb-4">
       <h3 className="text-lg font-bold text-white">Is betting on Stake safe?</h3>
       <div className="flex justify-between items-center">
         <div className="text-gray-400">
@@ -97,7 +98,7 @@ function StakeInfo() {
       </div>
     </div>
 
-    <div className="bg-gray-800 rounded-md p-4 mb-4">
+    <div className="bg-slate-800 flex justify-between rounded-md p-4 mb-4">
       <h3 className="text-lg font-bold text-white">What currencies can I bet with?</h3>
       <div className="flex justify-between items-center">
         <div className="text-gray-400">
@@ -120,7 +121,7 @@ function StakeInfo() {
       </div>
     </div>
 
-    <div className="bg-gray-800 rounded-md p-4 mb-4">
+    <div className="bg-slate-800 flex justify-between rounded-md p-4 mb-4">
       <h3 className="text-lg font-bold text-white">What type of casino games can I play?</h3>
       <div className="flex justify-between items-center">
         <div className="text-gray-400">
@@ -142,7 +143,7 @@ function StakeInfo() {
         </svg>
       </div>
     </div>
-    <div className="bg-gray-800 rounded-md p-4 mb-4">
+    <div className="bg-slate-800 flex justify-between rounded-md p-4 mb-4">
       <h3 className="text-lg font-bold text-white">What sports can I bet on?</h3>
       <div className="flex justify-between items-center">
         <div className="text-gray-400">
@@ -164,7 +165,7 @@ function StakeInfo() {
         </svg>
       </div>
     </div>
-    <div className="bg-gray-800 rounded-md p-4 mb-4">
+    <div className="bg-slate-800 flex justify-between rounded-md p-4 mb-4">
       <h3 className="text-lg font-bold text-white">How do I watch live streams?</h3>
       <div className="flex justify-between items-center">
         <div className="text-gray-400">
